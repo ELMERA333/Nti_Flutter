@@ -1,6 +1,6 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 void main() => runApp(app());
 
 class app extends StatelessWidget {
@@ -15,8 +15,7 @@ class app extends StatelessWidget {
 }
 
 class homePage extends StatelessWidget {
-  // متغيرات بسيطة توضح إن الطالب هو اللي عاملها
-  final String name = 'Ahmed Saber';
+  final String name = 'mariam housam';
   final int tasksPercent = 80;
   final int inProgressCount = 5;
   final int personalCount = 5;
@@ -37,7 +36,6 @@ class homePage extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // بديل للصورة: دائرة مع أيقونة علم
                   Container(
                     width: 56,
                     height: 56,
@@ -62,7 +60,6 @@ class homePage extends StatelessWidget {
 
               SizedBox(height: 20),
 
-              // big green progress card
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 18, vertical: 18),
                 decoration: BoxDecoration(
@@ -71,7 +68,6 @@ class homePage extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    // left column: text + percent
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +79,6 @@ class homePage extends StatelessWidget {
                       ),
                     ),
 
-                    // view tasks button style
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                       decoration: BoxDecoration(
@@ -98,7 +93,6 @@ class homePage extends StatelessWidget {
 
               SizedBox(height: 18),
 
-              // In Progress label with badge
               Row(
                 children: [
                   Text('In Progress', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
@@ -113,7 +107,6 @@ class homePage extends StatelessWidget {
 
               SizedBox(height: 12),
 
-              // sample black task card
               Container(
                 padding: EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -144,35 +137,28 @@ class homePage extends StatelessWidget {
 
               SizedBox(height: 22),
 
-              // Task Groups label
               Text('Task Groups', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               SizedBox(height: 12),
 
-              // personal task row
               taskRow(icon: Icons.person, title: 'Personal Task', count: personalCount, badgeColor: Colors.green[100], iconBg: Colors.green[50]),
 
               SizedBox(height: 12),
 
-              // home task row (pink)
               taskRow(icon: Icons.home, title: 'Home Task', count: homeCount, badgeColor: Colors.pink[50], iconBg: Colors.pink[50], usePinkIcon: true),
 
               SizedBox(height: 12),
 
-              // work task row (black badge)
               taskRow(icon: Icons.work_outline, title: 'Work Task', count: workCount, badgeColor: Colors.black, iconBg: Colors.black),
 
-              // spacer to push fab to bottom-right
               Expanded(child: SizedBox()),
 
-              // floating-like add button placed at bottom right
               Align(
                 alignment: Alignment.bottomRight,
                 child: Container(
                   margin: EdgeInsets.only(bottom: 6),
                   child: FloatingActionButton(
                     onPressed: () {
-                      // هنا ممكن تضيف عملية إضافة مهمة أو تخرج رسالة بسيطة
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Add task pressed')));
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('رسالة عادية')));
                     },
                     backgroundColor: Colors.green[700],
                     child: Icon(Icons.add, size: 28),

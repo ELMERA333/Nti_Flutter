@@ -44,7 +44,6 @@ class OrderDetailsPage extends StatelessWidget {
               ),
             ),
 
-            // white rounded content card
             Expanded(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(16, 12, 16, 16),
@@ -59,7 +58,6 @@ class OrderDetailsPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // order header row
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -81,7 +79,6 @@ class OrderDetailsPage extends StatelessWidget {
                     const Divider(color: Color(0xFFFFE6D9), thickness: 1.0),
                     const SizedBox(height: 12),
 
-                    // item 1
                     orderItemRow(
                       title: 'Strawberry Shake',
                       subtitle: '3 Items',
@@ -92,7 +89,6 @@ class OrderDetailsPage extends StatelessWidget {
                     const Divider(color: Color(0xFFFFE6D9), thickness: 1.0),
                     const SizedBox(height: 12),
 
-                    // item 2
                     orderItemRow(
                       title: 'Broccoli Lasagna',
                       subtitle: '3 Items',
@@ -103,7 +99,6 @@ class OrderDetailsPage extends StatelessWidget {
                     const Divider(color: Color(0xFFFFE6D9), thickness: 1.0),
                     const SizedBox(height: 18),
 
-                    // totals
                     totalsRow(label: 'Subtotal', value: subtotal),
                     const SizedBox(height: 10),
                     totalsRow(label: 'Tax and Fees', value: tax),
@@ -118,11 +113,9 @@ class OrderDetailsPage extends StatelessWidget {
 
                     const Spacer(),
 
-                    // action buttons - Cancel & Track
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        // Cancel Order (red-like)
                         Expanded(
                           child: ElevatedButton(
                             onPressed: () {
@@ -138,7 +131,6 @@ class OrderDetailsPage extends StatelessWidget {
                         ),
                         const SizedBox(width: 14),
 
-                        // Track Driver (light peach)
                         Expanded(
                           child: ElevatedButton(
                             onPressed: () {
